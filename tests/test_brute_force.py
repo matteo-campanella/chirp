@@ -33,7 +33,7 @@ class TestCaseBruteForce(base.DriverTest):
             for tmode in self.rf.valid_tmodes:
                 if tmode not in chirp_common.TONE_MODES:
                     continue
-                elif tmode in ["DTCS", "DTCS-R", "Cross"]:
+                elif tmode in ["DTCS", "DTCS-R", "Cross", "DTCSBEEP"]:
                     continue  # We'll test DCS and Cross tones separately
 
                 m.tmode = tmode
@@ -41,7 +41,7 @@ class TestCaseBruteForce(base.DriverTest):
                     pass
                 elif tmode == "Tone":
                     m.rtone = tone
-                elif tmode in ["TSQL", "TSQL-R"]:
+                elif tmode in ["TSQL", "TSQL-R", "TSQLBEEP"]:
                     if self.rf.has_ctone:
                         m.ctone = tone
                     else:
