@@ -97,7 +97,9 @@ TONE_MODES = (
     "",
     "Tone",
     "TSQL",
+    "TSQLBEEP"
     "DTCS",
+    "DTCSBEEP"
     "DTCS-R",
     "TSQL-R",
     "Cross",
